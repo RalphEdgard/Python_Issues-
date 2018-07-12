@@ -1,0 +1,46 @@
+I have no problem running this segment of code for turtle to draw a square 
+
+import turtle
+bob = turtle.Turtle()
+print(bob)
+
+def square(t):
+    for i in range(4):
+        t.fd(100)
+        t.lt(90)
+
+square(bob)
+
+=====================================================================
+
+This segment of code is also good when I run it through python
+
+
+def square(t, length):
+    for i in range(4):
+        t.fd(length)
+        t.lt(90)
+
+square(bob, 100)
+
+======================================================================
+
+This segment of code draws a polygon and it also runs good in python 
+
+def polygon(t, n, length):
+    angle = 360 / n
+    for i in range(n):
+        t.fd(length)
+        t.lt(angle)
+
+polygon(bob, 7, 70)
+
+=======================================================================
+
+This is the segment of code that does not seem to run, I would like to know if its because it is not called, I'm new to using turtle
+
+def circle(t, r):
+    circumference = 2 * math.pi * r
+    n = 50
+    length = circumference / n
+    polygon(t, n, length)
